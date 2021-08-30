@@ -12,7 +12,8 @@ public class ManagerScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public static ManagerScript Instance;
-    public static int highestScore = 0;
+    static int highestScore = 0;
+    static string name = "Default";
     void Awake()
     {
         if(Instance != null)
@@ -32,6 +33,14 @@ public class ManagerScript : MonoBehaviour
     public int GetScore()
     {
         return highestScore;
+    }
+    public void SetName(string s)
+    {
+        name = s;
+    }
+    public string GetName()
+    {
+        return name;
     }
     public void ChangeScene(int i)
     {

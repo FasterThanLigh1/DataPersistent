@@ -15,7 +15,7 @@ public class HighScore : MonoBehaviour
     void Start()
     {
         scoreText = GetComponent<Text>();
-        scoreText.text = "High score: " + score;
+        scoreText.text = "High score: " + score + " || Name: " + ManagerScript.Instance.GetName();
     }
 
     // Update is called once per frame
