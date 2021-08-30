@@ -71,6 +71,10 @@ public class MainManager : MonoBehaviour
     public void GameOver()
     {
         m_GameOver = true;
+        if(m_Points > ManagerScript.Instance.GetScore())
+        {
+            ManagerScript.Instance.SetScore(m_Points);
+        }
         GameOverText.SetActive(true);
     }
 }
